@@ -8,11 +8,13 @@ class SimplestMarkupBlogServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        # code...
+
     }
 
     public function register()
     {
-        # code...
+        $this->app->bind('simple-blog', function($app) {
+            return new SimpleBlog();
+        });
     }
 }
