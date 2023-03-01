@@ -1,0 +1,24 @@
+{
+    "name": "barrydevt/simplest-markup-blog",
+    "description": "The quickest, dirtiest way to get a blog up and running in Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Barrydevt\\SimplestMarkupBlog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Barry Mason",
+            "email": "barrywebla@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SimplestMarkupBlog\\SimplestMarkupBlogServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
