@@ -4,11 +4,6 @@ namespace Barrydevt\SimplestMarkupBlog;
 
 class FileReader
 {
-    public function __construct()
-    {
-
-    }
-
     /**
      * @return void
      * @throws \Exception

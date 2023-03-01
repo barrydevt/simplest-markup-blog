@@ -13,6 +13,10 @@ class SimplestMarkupBlogServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->app()->bind(FileReader::class, function() {
+            return new FileReader();
+        });
+
         $this->app->bind('simple-blog', function($app) {
             return new SimpleBlog();
         });
