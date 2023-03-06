@@ -1,3 +1,7 @@
+# WIP 
+
+=======
+
 # Simplest Markup Blog
 
 This package is a quick and dirty way to get some kind of structured blog up and running in no time and with minimum configuration.
