@@ -4,10 +4,13 @@ namespace Barrydevt\SimplestMarkupBlog\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class SimpleBlog extends Facade
+class SimplestBlog extends Facade
 {
+    /**
+     * @return string
+     */
     protected static function getFacadeAccessor()
     {
-        return 'simple-blog';
+        return 'simplest-blog';
     }
 }

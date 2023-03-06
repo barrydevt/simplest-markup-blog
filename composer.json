@@ -1,6 +1,6 @@
 {
     "name": "barrydevt/simplest-markup-blog",
-    "description": "The quickest, dirtiest way to get a blog up and running in Laravel",
+    "description": "The quickest way to get a blog up and running in Laravel",
     "type": "library",
     "autoload": {
         "psr-4": {

@@ -2,23 +2,33 @@
 
 namespace Barrydevt\SimplestMarkupBlog;
 
+use Barrydevt\SimplestMarkupBlog\BlogRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class SimplestMarkupBlogServiceProvider extends ServiceProvider
 {
-    public function boot()
-    {
+    /**
+     * @return void
+     */
+    public function boot(){}
 
-    }
-
+    /**
+     * @return void
+     */
     public function register()
     {
-        $this->app()->bind(FileReader::class, function() {
-            return new FileReader();
+        /*
+         * Bind the SimplestBlog class to the facade
+         */
+        $this->app->bind('simplest-blog', function($app) {
+            return $this->app->make(SimplestBlog::class);
         });
-
-        $this->app->bind('simple-blog', function($app) {
-            return new SimpleBlog();
-        });
+        /*
+         * Bind the file system repo as the blog repository
+         */
+        $this->app->bind(
+            BlogRepositoryInterface::class,
+            FileSystemRepository::class
+        );
     }
 }
